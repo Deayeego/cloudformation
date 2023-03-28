@@ -1,21 +1,15 @@
 AWSTemplateFormatVersion: 2010-09-09
-Description: Part 1 - Build a webapp stack with CloudFormation 
+Description: Part 1 - Build a webapp stack with CloudFormation
+
+ 
 
 Resources:
-  WebAppInstance202:
-    Type: AWS::EC2::Instance
-    Properties:
-      ImageId: ami-005f9685cb30f234b
-      #ImageId: ami-0d5eff06f840b45e9 # ImageID valid only in us-east-1 region
-      InstanceType: t2.micro
-      "Tags" : [
-            {"Key" : "Name", "Value" : "diego-cloudformation-test-s3bucket"},
-        ]  
-
-
-Resources:
-  S3Bucket:
-    Type: "AWS::S3::Bucket"
-    DeletionPolicy: "Retain"
-    Properties:
-      BucketName: "diego-ec2-cftbucket202"
+  WebAppInstanceEC2:
+    Type: AWS::EC2::Instance
+    Properties:
+      ImageId: ami-005f9685cb30f234b
+      #ImageId: ami-0d5eff06f840b45e9 # ImageID valid only in us-east-1 region
+      InstanceType: t2.micro
+      "Tags" : [
+            {"Key" : "Name", "Value" : "diego-cloudformation-testForEC2"},
+        ]        
